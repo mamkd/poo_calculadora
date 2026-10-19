@@ -20,13 +20,13 @@
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-padding: 5;">
                <children>
                   <Label text="Número A" />
-                  <TextField />
+                  <TextField fx:id="numAField" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-padding: 5;">
                <children>
                   <Label text="Número B" />
-                  <TextField />
+                  <TextField fx:id="numBField" />
                </children>
             </VBox>
          </children>
@@ -36,17 +36,16 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-spacing: 15;">
          <children>
-            <Button mnemonicParsing="false" text="+" />
-            <Button mnemonicParsing="false" text="-" />
-            <Button mnemonicParsing="false" text="×" />
-            <Button mnemonicParsing="false" text="÷" />
-            <Button mnemonicParsing="false" text="mod" />
+            <Button mnemonicParsing="false" onAction="#onSumar" text="+" />
+            <Button mnemonicParsing="false" onAction="#onRestar" text="-" />
+            <Button mnemonicParsing="false" onAction="#onMultiplicar" text="×" />
+            <Button mnemonicParsing="false" onAction="#onDividir" text="÷" />
+            <Button mnemonicParsing="false" onAction="#onModulo" text="mod" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-spacing: 10;">
          <children>
-            <Label text="A ⁎ B =" />
-            <Label text="(Resultado)" />
+            <Label fx:id="resultadoLabel" />
          </children>
       </HBox>
    </children>
